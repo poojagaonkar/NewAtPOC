@@ -22,7 +22,9 @@ namespace AttiniPOC.iOS
             Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
             // If you have defined a root view controller, set it here:
-            // Window.RootViewController = myViewController;
+            UIStoryboard storyboard = UIStoryboard.FromName("Main", null);
+            var myViewController = storyboard.InstantiateViewController("Login_VC") as LoginViewController;
+            Window.RootViewController = myViewController;
 
             // make the window visible
             Window.MakeKeyAndVisible();
