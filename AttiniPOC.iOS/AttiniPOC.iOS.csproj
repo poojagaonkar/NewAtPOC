@@ -44,8 +44,9 @@
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <CodesignKey>iPhone Distribution: Rapid Circle B.V. (YV4K58B423)</CodesignKey>
+    <CodesignKey>iPhone Developer: Suyug Patki (CKCLGZW49T)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
+    <CodesignProvision>e89b0603-54d3-44f6-81f9-9e131b6f3417</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
