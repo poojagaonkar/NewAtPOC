@@ -26,6 +26,7 @@ using Newtonsoft.Json;
 using Android.Util;
 using Gcm.Client;
 
+
 namespace AttiniPoc
 {
     [Activity(Label = "AttiniPoc", MainLauncher = true, Icon = "@drawable/icon")]
