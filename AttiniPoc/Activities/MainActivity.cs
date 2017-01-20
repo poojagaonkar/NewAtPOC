@@ -24,6 +24,7 @@ using System.IO;
 using Android.Webkit;
 using Newtonsoft.Json;
 
+
 namespace AttiniPoc
 {
     [Activity(Label = "AttiniPoc", MainLauncher = true, Icon = "@drawable/icon")]
