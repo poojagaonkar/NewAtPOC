@@ -20,7 +20,10 @@ namespace AttiniPoc
         public static string CLIENTID = "4d812628-ec3a-41f1-92a0-04d773b3ca8c";
         public static string GRAPHURI = "https://graph.microsoft.com";
         public static string SHAREPOINTURL = null;
-       
+
+        public const string SenderID = "12185024853"; // Google API Project Number
+        public const string ListenConnectionString = "Endpoint=sb://attinitestpocns.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=Tc4/MXmPLEg3V1c/Dki5nwLC5TRm+bp6QTyr4eG4zYM=";
+        public const string NotificationHubName = "attinitestpoc";
 
         //public static string AUTHORITY = "https://login.windows.net/common";
         //public static Uri RETURNURI = new Uri("https://attinipoc-redirect");

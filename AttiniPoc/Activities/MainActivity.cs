@@ -23,6 +23,8 @@ using Java.IO;
 using System.IO;
 using Android.Webkit;
 using Newtonsoft.Json;
+using Android.Util;
+using Gcm.Client;
 
 namespace AttiniPoc
 {
@@ -55,6 +57,9 @@ namespace AttiniPoc
              SetContentView (Resource.Layout.Main);
             var videoView = FindViewById<VideoView>(Resource.Id.videoView1);
             var imgView = FindViewById<ImageView>(Resource.Id.imageView1);
+
+            RegisterWithGCM();
+
 
             Initialize(ServiceConstants.AUTHORITY, ServiceConstants.RETURNURI, ServiceConstants.CLIENTID, siteUrl);
 
@@ -119,7 +124,16 @@ namespace AttiniPoc
 
 
         }
+        private void RegisterWithGCM()
+        {
+            // Check to ensure everything's set up right
+            GcmClient.CheckDevice(this);
+            GcmClient.CheckManifest(this);
 
+            // Register for push notifications
+            Log.Info("MainActivity", "Registering...");
+            GcmClient.Register(this, ServiceConstants.SenderID);
+        }
         public async Task<string> AuthenticateDevice(string encodedAccountName, string deviceId, string hostUrl)
         {
             string url = "https://www.attinicomms2.com/api/AuthenticateDevice" + "?encodedAccountName=" + encodedAccountName + "&deviceId=" + deviceId + "&hostUrl=" + hostUrl;
