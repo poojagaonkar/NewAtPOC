@@ -15,10 +15,10 @@ using Android.App;
 using Android.Content;
 using Android.Util;
 using Gcm.Client;
+using WindowsAzure.Messaging;
 
-
-[assembly: Permission(Name = "@PACKAGE_NAME@.permission.C2D_MESSAGE")]
-[assembly: UsesPermission(Name = "@PACKAGE_NAME@.permission.C2D_MESSAGE")]
+[assembly: Permission(Name = "com.poc.attpoc.permission.C2D_MESSAGE")]
+[assembly: UsesPermission(Name = "com.poc.attpoc.permission.C2D_MESSAGE")]
 [assembly: UsesPermission(Name = "com.google.android.c2dm.permission.RECEIVE")]
 
 //GET_ACCOUNTS is needed only for Android versions 4.0.3 and below
@@ -30,11 +30,11 @@ namespace AttiniPoc
 {
     [BroadcastReceiver(Permission = Gcm.Client.Constants.PERMISSION_GCM_INTENTS)]
     [IntentFilter(new string[] { Gcm.Client.Constants.INTENT_FROM_GCM_MESSAGE },
-     Categories = new string[] { "@PACKAGE_NAME@" })]
+     Categories = new string[] { "com.poc.attpoc" })]
     [IntentFilter(new string[] { Gcm.Client.Constants.INTENT_FROM_GCM_REGISTRATION_CALLBACK },
-     Categories = new string[] { "@PACKAGE_NAME@" })]
+     Categories = new string[] { "com.poc.attpoc" })]
     [IntentFilter(new string[] { Gcm.Client.Constants.INTENT_FROM_GCM_LIBRARY_RETRY },
-     Categories = new string[] { "@PACKAGE_NAME@" })]
+     Categories = new string[] { "com.poc.attpoc" })]
     public class MyBroadcastReceiver : GcmBroadcastReceiverBase<PushHandlerService>
     {
         public static string[] SENDER_IDS = new string[] { ServiceConstants.SenderID };
@@ -69,7 +69,7 @@ namespace AttiniPoc
             string messageText = intent.Extras.GetString("message");
             if (!string.IsNullOrEmpty(messageText))
             {
-                createNotification("New hub message!", messageText);
+                createNotification("Test message from Hub!", messageText);
             }
             else
             {
@@ -135,7 +135,8 @@ namespace AttiniPoc
         protected void dialogNotify(String title, String message)
         {
 
-            MainActivity.Instance.RunOnUiThread(() => {
+            MainActivity.instance
+                .RunOnUiThread(() => {
                 AlertDialog.Builder dlg = new AlertDialog.Builder(MainActivity.instance);
                 AlertDialog alert = dlg.Create();
                 alert.SetTitle(title);

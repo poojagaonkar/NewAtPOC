@@ -48,6 +48,7 @@ namespace AttiniPoc
         string vidLinkReq = "https://rapidcircle1com.sharepoint.com/sites/iimdev/_api/web/getfilebyserverrelativeurl('/sites/IIMDev/Photos/SampleVideo_1280x720_1mb.mp4')/$value";
         string siteUrl = "https://rapidcircle1com.sharepoint.com";
         private DeviceModel deviceDetailObj;
+        public static MainActivity instance;
 
         //test2@rahulpatilzevenseas.onmicrosoft.com
         protected override async void OnCreate(Bundle bundle)
@@ -59,6 +60,7 @@ namespace AttiniPoc
             var videoView = FindViewById<VideoView>(Resource.Id.videoView1);
             var imgView = FindViewById<ImageView>(Resource.Id.imageView1);
 
+            instance = this;
             RegisterWithGCM();
 
 
