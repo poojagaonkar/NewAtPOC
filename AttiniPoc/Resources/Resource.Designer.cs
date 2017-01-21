@@ -49,7 +49,10 @@ namespace AttiniPoc
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			public const int ic_launcher = 2130837504;
+			
+			// aapt resource value: 0x7f020001
+			public const int Icon = 2130837505;
 			
 			static Drawable()
 			{
@@ -105,14 +108,17 @@ namespace AttiniPoc
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int ApplicationName = 2130968577;
-			
 			// aapt resource value: 0x7f040002
-			public const int Hello = 2130968578;
+			public const int ApplicationName = 2130968578;
+			
+			// aapt resource value: 0x7f040003
+			public const int Hello = 2130968579;
 			
 			// aapt resource value: 0x7f040000
-			public const int library_name = 2130968576;
+			public const int app_name = 2130968576;
+			
+			// aapt resource value: 0x7f040001
+			public const int library_name = 2130968577;
 			
 			static String()
 			{

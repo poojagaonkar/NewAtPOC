@@ -13,8 +13,9 @@ namespace AttiniPoc
         public static string CLIENTID = "4d812628-ec3a-41f1-92a0-04d773b3ca8c";
         public static string GRAPHURI = "https://graph.microsoft.com";
         public static string SHAREPOINTURL = null;
-        public const string ConnectionString   = "Endpoint=sb://attinitestpocns.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=2mpNaAIcLU07yPRO9UxEXmOGZQyWvzmBp/4/viK7Sy8=";
-        public const string NotificationHubPath = "attinitestpoc";
+      public const string ListenConnectionString = "Endpoint=sb://attinitestpocns.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=Tc4/MXmPLEg3V1c/Dki5nwLC5TRm+bp6QTyr4eG4zYM=";
+        //    public const string ListenConnectionString = "Endpoint=sb://attinitestpocns.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=2mpNaAIcLU07yPRO9UxEXmOGZQyWvzmBp/4/viK7Sy8=";
 
+        public const string NotificationHubName = "attinitestpoc";
     }
 }

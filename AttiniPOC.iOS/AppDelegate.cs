@@ -25,16 +25,20 @@ namespace AttiniPOC.iOS
 		{
 			// create a new window instance based on the screen size
 			Window = new UIWindow(UIScreen.MainScreen.Bounds);
-			if (Convert.ToInt16(UIDevice.CurrentDevice.SystemVersion.Split('.')[0].ToString()) < 8)
+
+			if (UIDevice.CurrentDevice.CheckSystemVersion(8, 0))
 			{
-				UIRemoteNotificationType notificationTypes = UIRemoteNotificationType.Alert | UIRemoteNotificationType.Badge | UIRemoteNotificationType.Sound;
-				UIApplication.SharedApplication.RegisterForRemoteNotificationTypes(notificationTypes);
+				var pushSettings = UIUserNotificationSettings.GetSettingsForTypes(
+					   UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound,
+					   new NSSet());
+
+				UIApplication.SharedApplication.RegisterUserNotificationSettings(pushSettings);
+				UIApplication.SharedApplication.RegisterForRemoteNotifications();
+				
 			}
 			else {
-				UIUserNotificationType notificationTypes = UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound;
-				var settings = UIUserNotificationSettings.GetSettingsForTypes(notificationTypes, new NSSet(new string[] { }));
-				UIApplication.SharedApplication.RegisterUserNotificationSettings(settings);
-				UIApplication.SharedApplication.RegisterForRemoteNotifications();
+				UIRemoteNotificationType notificationTypes = UIRemoteNotificationType.Alert | UIRemoteNotificationType.Badge | UIRemoteNotificationType.Sound;
+				UIApplication.SharedApplication.RegisterForRemoteNotificationTypes(notificationTypes);
 			}
 
 			//CrossPushNotification.Initialize<CustomPushNotificationListener>();
@@ -83,11 +87,11 @@ namespace AttiniPOC.iOS
 		}
 		public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
 		{
-			Hub = new SBNotificationHub(ServiceConstants.ConnectionString, ServiceConstants.NotificationHubPath);
+			Hub = new SBNotificationHub(ServiceConstants.ListenConnectionString, ServiceConstants.NotificationHubName);
 
 			string token = deviceToken.ToString().Replace("<", "").Replace(">", "").Replace(" ", "");
 
-			deviceToken = NSData.FromString(token);
+			//deviceToken = NSData.FromString(token);
 			Hub.UnregisterAllAsync(deviceToken, (error) =>
 			{
 				if (error != null)
@@ -103,6 +107,8 @@ namespace AttiniPOC.iOS
 						Console.WriteLine("RegisterNativeAsync error: " + errorCallback.ToString());
 				});
 			});
+			
+		
 
 
 		}
@@ -112,11 +118,11 @@ namespace AttiniPOC.iOS
 		}
 		public override void HandleAction(UIApplication application, string actionIdentifier, NSDictionary remoteNotificationInfo, Action completionHandler)
 		{
-		
-			if(actionIdentifier == "declineAction")
+
+			if (actionIdentifier == "declineAction")
 			{
 			}
-			else if(actionIdentifier == "answerAction")
+			else if (actionIdentifier == "answerAction")
 			{
 			}
 		}

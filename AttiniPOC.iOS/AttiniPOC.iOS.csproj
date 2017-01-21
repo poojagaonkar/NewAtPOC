@@ -46,7 +46,7 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <CodesignKey>iPhone Developer: Suyug Patki (CKCLGZW49T)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignProvision>b29eb336-77db-4156-ab7a-8c23d95052b8</CodesignProvision>
+    <CodesignProvision>cd85e12a-b54f-4673-b730-ee2343f799c0</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
