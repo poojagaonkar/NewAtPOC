@@ -1,8 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Paths>
-  <ManifestDocuments />
+  <ManifestDocuments>
+    <ManifestDocument>obj\Debug\__library_projects__\Xamarin.Azure.NotificationHubs.Android\library_project_imports\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Debug\__library_projects__\Xamarin.Azure.NotificationHubs.Android\library_project_imports\aapt\AndroidManifest.xml</ManifestDocument>
+  </ManifestDocuments>
   <NativeLibraries />
   <Jars>
     <Jar>obj\Debug\__library_projects__\OkHttp\library_project_imports\okhttp-2.3.0-jar-with-dependencies.jar</Jar>
+    <Jar>obj\Debug\__library_projects__\Xamarin.Azure.NotificationHubs.Android\library_project_imports\bin\classes.jar</Jar>
   </Jars>
 </Paths>

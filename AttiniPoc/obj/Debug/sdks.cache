@@ -2,18 +2,18 @@
 <Sdk>
   <AndroidApiLevel>23</AndroidApiLevel>
   <AndroidApiLevelName>23</AndroidApiLevelName>
-  <AndroidNdkPath>/Users/rahulpatil/Library/Developer/Xamarin/android-ndk/android-ndk-r10e</AndroidNdkPath>
-  <AndroidSdkBuildToolsPath>/Users/rahulpatil/Library/Developer/Xamarin/android-sdk-macosx/build-tools/23.0.1</AndroidSdkBuildToolsPath>
-  <AndroidSdkBuildToolsBinPath>/Users/rahulpatil/Library/Developer/Xamarin/android-sdk-macosx/build-tools/23.0.1</AndroidSdkBuildToolsBinPath>
-  <AndroidSdkPath>/Users/rahulpatil/Library/Developer/Xamarin/android-sdk-macosx</AndroidSdkPath>
-  <JavaSdkPath>/usr</JavaSdkPath>
-  <MonoAndroidBinPath>/Library/Frameworks/Xamarin.Android.framework/Versions/Current/bin</MonoAndroidBinPath>
-  <MonoAndroidToolsPath>/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid</MonoAndroidToolsPath>
+  <AndroidNdkPath />
+  <AndroidSdkBuildToolsPath>C:\Users\PoojaGaonkar\Xamarin\Universal\AndroidSDK\build-tools\23.0.2</AndroidSdkBuildToolsPath>
+  <AndroidSdkBuildToolsBinPath>C:\Users\PoojaGaonkar\Xamarin\Universal\AndroidSDK\build-tools\23.0.2</AndroidSdkBuildToolsBinPath>
+  <AndroidSdkPath>C:\Users\PoojaGaonkar\Xamarin\Universal\AndroidSDK</AndroidSdkPath>
+  <JavaSdkPath>C:\Program Files (x86)\Java\jdk1.8.0_101</JavaSdkPath>
+  <MonoAndroidBinPath>C:\Program Files (x86)\MSBuild\Xamarin\Android</MonoAndroidBinPath>
+  <MonoAndroidToolsPath>C:\Program Files (x86)\MSBuild\Xamarin\Android</MonoAndroidToolsPath>
   <ReferenceAssemblyPaths>
-    <ReferenceAssemblyPath>/Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/</ReferenceAssemblyPath>
+    <ReferenceAssemblyPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\</ReferenceAssemblyPath>
   </ReferenceAssemblyPaths>
   <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
-  <ZipAlignPath>/Users/rahulpatil/Library/Developer/Xamarin/android-sdk-macosx/build-tools/23.0.1</ZipAlignPath>
+  <ZipAlignPath>C:\Users\PoojaGaonkar\Xamarin\Universal\AndroidSDK\build-tools\23.0.2</ZipAlignPath>
   <MonoAndroidIncludePath />
   <SupportedApiLevel>23</SupportedApiLevel>
   <AndroidSequencePointsMode>None</AndroidSequencePointsMode>

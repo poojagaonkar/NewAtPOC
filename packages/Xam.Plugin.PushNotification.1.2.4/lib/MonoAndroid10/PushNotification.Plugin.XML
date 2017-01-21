@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PushNotification.Plugin</name>
+    </assembly>
+    <members>
+        <member name="T:PushNotification.Plugin.CrossPushNotification">
+            <summary>
+            Cross platform PushNotification implemenations
+            </summary>
+        </member>
+        <member name="P:PushNotification.Plugin.CrossPushNotification.Current">
+            <summary>
+            Current settings to use
+            </summary>
+        </member>
+        <member name="T:PushNotification.Plugin.PushNotificationGcmListener">
+            <summary>
+            Push Notification Message Handler
+            </summary>
+        </member>
+        <member name="M:PushNotification.Plugin.PushNotificationGcmListener.OnMessageReceived(System.String,Android.OS.Bundle)">
+            <summary>
+            Called when message is received.
+            </summary>
+            <param name="from"></param>
+            <param name="extras"></param>
+        </member>
+        <member name="T:PushNotification.Plugin.PushNotificationImplementation">
+            <summary>
+            Implementation for Feature
+            </summary>
+        </member>
+        <member name="P:PushNotification.Plugin.PushNotificationImplementation.Listener">
+            <summary>
+            Push Notification Listener
+            </summary>
+        </member>
+        <member name="P:PushNotification.Plugin.PushNotificationImplementation.Token">
+            <summary>
+            GCM Token
+            </summary>
+        </member>
+        <member name="M:PushNotification.Plugin.PushNotificationImplementation.Register">
+            <summary>
+            Register for Push Notifications
+            </summary>
+        </member>
+        <member name="M:PushNotification.Plugin.PushNotificationImplementation.Unregister">
+            <summary>
+            Unregister push notifications
+            </summary>
+        </member>
+        <member name="M:PushNotification.Plugin.PushNotificationInstanceIDListenerService.OnTokenRefresh">
+            Called if InstanceID token is updated. This may occur if the security of
+            the previous token had been compromised. This call is initiated by the
+            InstanceID provider.
+        </member>
+    </members>
+</doc>
